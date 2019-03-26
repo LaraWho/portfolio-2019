@@ -1,6 +1,13 @@
 body {
   font-family: 'Nunito', sans-serif;
-  background-color: rgba(245, 219, 21, 0.1);
+  background-color: rgb(204, 204, 202);
+}
+
+:root {
+  /* --header-color: rgba(245, 219, 21, 0.8); */
+  --header-color: rgb(245, 219, 21);
+  --body-text:  #333;
+  --nav-text: #929292;
 }
 
 /* Header */
@@ -13,7 +20,7 @@ header {
 #outer-box {
   height: 100vh;
   width: 100vw;
-  background-image: url('temp-img.png');
+  background-image: url('assets/temp-img.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -30,9 +37,8 @@ header {
 }
 
 .title {
-  color: rgb(245, 219, 21);
+  color: var(--header-color);
   text-transform: uppercase;
-  /* position: absolute; */
   z-index: 2;
   width: 80vw;
 }
@@ -53,41 +59,66 @@ nav {
   justify-content: space-around;
   align-items: center;
   width: 100vw;
-  height: 5%;
-  background-color:  rgba(245, 219, 21, 0.8);
+  background-color: var(--header-color);
   font-size: 1.5em;
   text-transform: uppercase;
+}
 
+.scrolled {
+  position: sticky;
+  top: 0;
+  /* z-index: 5; */
 }
 
 a {
   font-family: 'Nunito', sans-serif;
   text-decoration: none;
-  /* color: #FFF; */
-  color: #929292;
+  color: var(--nav-text);
   padding: 10px;
   font-weight: 800;
 }
 
-/* About */
-#about {
+/* About, Skills */
+section {
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding-top: 40px;
+  padding-bottom: 40px;
   /* background-color: rgba(245, 219, 21, 0.1); */
-  color: #4c4c4c;
+  color: var(--body-text);
 }
 
-#about > h1 {
+h1 {
   margin: 10px;
   font-weight: 800;
   font-size: 2em;
 }
 
-#about > p {
+p {
   margin: 20px;
+  width: 80vw;
+  text-align: center;
+}
+
+/* Skills */
+#skills {
+  /* height: 100vh; */
+  width: 100vw;
+  /* background-image: url('assets/skills.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+}
+
+.skill-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
   width: 80vw;
 }
 
