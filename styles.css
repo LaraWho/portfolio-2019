@@ -30,6 +30,7 @@ html {
   --header-color: #f5db15;
   --body-text:  #333;
   --nav-text: #929292;
+  --hover-text: #6d6b6b;
 }
 
 /* Header */
@@ -83,7 +84,7 @@ nav {
   width: 100vw;
   height: 10vh;
   background-color: var(--header-color);
-  font-size: 1.5em;
+  font-size: 1em;
   text-transform: uppercase;
 }
 
@@ -93,6 +94,11 @@ nav {
   color: var(--nav-text);
   padding: 10px;
   font-weight: 800;
+  transition: .5s all ease;
+}
+
+.navbar > h4:hover {
+  color: var(--hover-text);
 }
 
 .scrolled {
@@ -124,6 +130,7 @@ section:nth-of-type(2) {
 section:nth-of-type(3) {
   background-color: rgba(21, 47, 245, 0.35);
   padding: 60px 0px;
+  padding-bottom: 10vh;
 }
 
 section:nth-of-type(4) {
@@ -170,26 +177,37 @@ p {
 }
 
 /* Portfolio */
+#portfolio {
+  height: auto;
+}
+
 #portfolio > .site-link {
   text-align: left;
 }
 
 #portfolio > h1 {
   width: 80vw;
+  margin-top: 10vh;
 }
 
 .project > p {
-  margin: 0 0 0 20px;
-  width: 30vw;
+  margin: 20px 0;
+  width: 80vw;
 }
 
 a {
   text-decoration: none; cursor: pointer;
   font-family: 'Nunito', sans-serif;
-  padding: 10px;
+  padding: 2.5px;
   font-weight: 800;
-  color: #fff;
+  color: var(--nav-text);
+  /* color: #fff; */
   width: 80vw;
+  transition: .5s all ease;
+}
+
+a:hover {
+  color: var(--hover-text);
 }
 
 .project-box {
@@ -198,20 +216,34 @@ a {
   align-items: center;
 }
 
+.project-box > h3 {
+  margin-bottom: 10px; 
+}
+
 .project {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-direction: column;
 }
 
 img {
-  width: 50%;
-  margin-left: 10vw;
+  width: 80vw;
+  margin-top: 10px;
 }
 
 /* video {
   margin: 50px 0px;
 } */
+
+/* Contact */
+/* #contact {
+} */
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 
 @media only screen and (min-width: 760px) {
 
@@ -221,12 +253,34 @@ img {
   }
 
   /* Nav Bar */
-  h4 {
+  .navbar > h4 {
+    font-size: 1.5em;
     padding: 20px;
   }
 
   /* About */
 
+  /* Portfolio */
+
+/* .project-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.project {
+  flex-direction: row;
+}
+
+.project > p {
+  margin: 0 0 0 20px;
+  width: 30vw;
+}
+
+img {
+  width: 50%;
+  margin-left: 10vw;
+}
 
 
   
