@@ -15,22 +15,23 @@
     <div id="overlay"></div>
     <div class="title">
       <h1>Lara Potjewyd</h1>
-      <h2>Web Developer</h2>
+      <h2>Full Stack Web Developer</h2>
     </div>
   </header>
 
   <nav class="navbar">
-    <a href="">About</a>
-    <a href="">Skills</a>
-    <a href="">Portfolio</a>
-    <a href="">Contact</a>
-    <!-- <a href="timeToTravel.html">Time To Travel</a> -->
+    <h4 onclick="scrollToAbout()">About</h4>
+    <h4 onclick="scrollToSkills()">Skills</h4>
+    <h4 onclick="scrollToPortfolio()">Portfolio</h4>
+    <h4 onclick="scrollToContact()">Contact</h4>
   </nav>
 
   <section id="about">
     <h1>About Me</h1>
     <p>
-        I am not a student of human nature. I am a professor of a far wider academy of which human nature is merely a part. Am I having a midlife crisis? Why are you pointing your screwdrivers like that? They're scientific instruments not water pistols! Reverse the polarity of the neutron flow. Let's go in! Are you capable of speaking without flapping your hands about? I am the Doctor! The original, you might say! An old friend of mine. Well, enemy. The stuff of nightmares reduced to an exhibit. I'm getting old.
+      I'm an English self-taught baker transferring into web development.
+      I've spent the last half of my 20s travelling and working in various parts of the world. I'm in Utah to advance my journey into programming. I hope to unite my passions for design and code to create some beautiful and functional websites. UX/UI is where I aim to be someday.
+      So far I've used React, Redux, SQL, Node.js, Bcrypt, Auth0, Express Sessions, Axios, Javascript, CSS, SCSS, and HTML.
     </p>
   </section>
 
@@ -52,15 +53,45 @@
   </section>
 
   <section id="portfolio">
-      <h1>Portfolio</h1>
+    <h1>Portfolio</h1>
+    <div class="project-box">
+      <h3>Cat Chase</h3>
+      <a href="https://cat-chase.herokuapp.com" target="_blank">Site Link</a>
+      <div class="project">
+        <!-- <video width="320" height="240" controls>
+            <source src="/assets/most-recent-cat-chase.mp4" type="video/mov">
+        </video> -->
+        <img src="assets/game-play.png" alt=""/>
+        <p>
+            A full-stack group project made by Amy Knudson, Jessie Jones, and Lara Potjewyd. We created this 2D collision detection game in React, using Javascript for all game logic, MongoDB and Mongoose to store and retrieve the player data and points.
+        </p>
+      </div>
+    </div>
+
+
+      <h3>Time To Travel</h3>
+      <a class="site-link" href="https://www.time-to-travel.fun/" target="_blank">Site Link</a>
+      <div class="project">
+        <p>
+          Let's go in! Are you capable of speaking without flapping your hands about? I am the Doctor! The original, you might say! An old friend of mine. Well, enemy. The stuff of nightmares reduced to an exhibit. I'm getting old.
+        </p>
+      </div>
+
+      <h3>Fridge-raiders</h3>
+      <a href="https://fridge-raiders.site/#/" target="_blank">Site Link</a>
+      <div class="project">
+        <p>
+          I am not a student of human nature. I am a professor of a far wider academy of which human nature is merely a part. Am I having a midlife crisis? Why are you pointing your screwdrivers 
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h1>Contact Me</h1>
       <p>
-          I am not a student of human nature. I am a professor of a far wider academy of which human nature is merely a part. Am I having a midlife crisis? Why are you pointing your screwdrivers like that? They're scientific instruments not water pistols! Reverse the polarity of the neutron flow. Let's go in! Are you capable of speaking without flapping your hands about? I am the Doctor! The original, you might say! An old friend of mine. Well, enemy. The stuff of nightmares reduced to an exhibit. I'm getting old.
-      </p>
-      <p>
-          I am not a student of human nature. I am a professor of a far wider academy of which human nature is merely a part. Am I having a midlife crisis? Why are you pointing your screwdrivers like that? They're scientific instruments not water pistols! Reverse the polarity of the neutron flow. Let's go in! Are you capable of speaking without flapping your hands about? I am the Doctor! The original, you might say! An old friend of mine. Well, enemy. The stuff of nightmares reduced to an exhibit. I'm getting old.
-      </p>
-      <p>
-          I am not a student of human nature. I am a professor of a far wider academy of which human nature is merely a part. Am I having a midlife crisis? Why are you pointing your screwdrivers like that? They're scientific instruments not water pistols! Reverse the polarity of the neutron flow. Let's go in! Are you capable of speaking without flapping your hands about? I am the Doctor! The original, you might say! An old friend of mine. Well, enemy. The stuff of nightmares reduced to an exhibit. I'm getting old.
+        larapotjewyd@gmail.com
+        add social icons
+        CV link
       </p>
     </section>
   <script src="app.js"></script>
