@@ -265,12 +265,12 @@ img {
   }
 
   /* Skills */
-  .skill-list {
+  /* .skill-list {
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
     font-weight: 800;
-  }
+  } */
 
   .skill-list > h2:hover {
     animation: skills .2s ease-in-out forwards;
