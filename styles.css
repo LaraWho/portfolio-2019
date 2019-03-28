@@ -262,6 +262,10 @@ img {
 
   /* About */
 
+  section > #about > h1 {
+    margin-top: 10vh !important;
+  }
+
   /* Portfolio */
 
 /* .project-box {
