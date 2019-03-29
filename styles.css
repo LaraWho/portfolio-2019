@@ -240,7 +240,7 @@ img {
   align-items: center;
   flex-direction: row;
   /* justify-content: flex-start; */
-  width: 52vw;
+  width: 51.5vw;
 }
 
 .fab, .fas, .far {
