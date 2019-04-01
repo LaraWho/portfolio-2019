@@ -66,17 +66,19 @@ header {
   z-index: 2;
   width: 80vw;
   letter-spacing: 3px;
-  line-height: 2.5em;
 }
 
 .title > h1 {
   font-size: 3em;
+  line-height: 1em;
   font-weight: 800;
+  margin-bottom: .1em;
 }
 
 .title > h2 {
   font-size: 1.5em;
   font-weight: 800;
+  line-height: 1.2em;
 }
 
 /* Nav Bar */
@@ -234,18 +236,45 @@ img {
 }
 
 /* Contact */
-
 .icons {
   display: flex;
   align-items: center;
   flex-direction: row;
-  /* justify-content: flex-start; */
   width: 51.5vw;
 }
 
 .fab, .fas, .far {
   font-size: 3em;
   margin: 5px;
+}
+
+@media only screen and (max-width: 380px) {
+  #about, #contact {
+    height: auto;
+    padding-top: 15vh;
+    padding-bottom: 10vh;
+  }
+
+  #skills {
+    height: auto;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+
+}
+
+@media only screen and (max-height: 560px) {
+  #about, #contact {
+    height: auto;
+    padding-top: 15vh;
+    padding-bottom: 10vh;
+  }
+
+  #skills {
+    height: auto;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
 }
 
 @media only screen and (min-width: 760px) {
