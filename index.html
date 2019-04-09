@@ -1,148 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link rel="shortcut icon" type="image/png" href="./ladybird.png"/>
-  <link href="https://fonts.googleapis.com/css?family=Nunito:400,800" rel="stylesheet">
-  <link rel="stylesheet" href="reset.css"/>
-  <link rel="stylesheet" href="styles.css"/>
-  
-  <title>Lara Potjewyd</title>
-</head>
-<body onscroll="scrollNav()">
-  <header id="outer-box">
-    <div id="overlay"></div>
-    <div class="title">
-      <h1>Lara Potjewyd</h1>
-      <h2>Full Stack Web Developer</h2>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" type="image/png" href="./ladybird.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:400,800"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
 
-  <nav class="navbar">
-    <h4 onclick="scrollToAbout()">About</h4>
-    <h4 onclick="scrollToSkills()">Skills</h4>
-    <h4 onclick="scrollToPortfolio()">Portfolio</h4>
-    <h4 onclick="scrollToContact()">Contact</h4>
-  </nav>
+    <title>Lara Potjewyd</title>
+  </head>
+  <body onscroll="scrollNav()">
+    <header id="outer-box">
+      <div id="overlay"></div>
+      <div class="title">
+        <h1>Lara Potjewyd</h1>
+        <h2>Full Stack Web Developer</h2>
+      </div>
+    </header>
 
-  <section id="about">
-    <h1>About Me</h1>
-    <p>
-      I built this site using HTML, CSS, and Javascript. I created the background image you saw above in Adobe Illustrator.
+    <nav class="navbar">
+      <h4 onclick="scrollToAbout()">About</h4>
+      <h4 onclick="scrollToSkills()">Skills</h4>
+      <h4 onclick="scrollToPortfolio()">Portfolio</h4>
+      <h4 onclick="scrollToContact()">Contact</h4>
+    </nav>
+
+    <section id="about">
+      <h1>About Me</h1>
+      <p>
+        <!-- I built this site using HTML, CSS, and Javascript. I created the background image you saw above in Adobe Illustrator.
       <br/>
-      <br/>
-      I love photography, travel, and reading. When travelling I get to take a lot of photos of beautiful and interesting things, and read many books! It's fantastic.
-      <br/>
-      <br/>
-      I'm an English self-taught baker transferring into web development.
-      I've spent the last half of my 20s travelling and working in various parts of the world. I'm in Utah to advance my journey into programming. I hope to unite my passions for design and code to create some beautiful and functional websites.
-    </p>
-  </section>
+      <br/> -->
+        I love photography, travel, and reading. When travelling I get to take a
+        lot of photos of beautiful and interesting things, and read many books!
+        It's fantastic.
+        <br />
+        <br />
+        I'm an English self-taught baker transferring into web development. I've
+        spent the last half of my 20s travelling and working in various parts of
+        the world. I'm in Utah to advance my journey into programming. I hope to
+        unite my passions for design and code to create some beautiful and
+        functional websites.
+      </p>
+    </section>
 
-  <section id="skills">
-    <h1>Skills</h1>
-    <div class="skill-list">
-      <h2>Javascript</h2>
-      <h2>React</h2>  
-      <h2>CSS</h2>  
-      <h2>HTML</h2> 
-      <h2>Figma</h2>  
-      <h2>Node.js</h2>  
-      <h2>Git</h2> 
-      <h2>Express</h2> 
-      <h2>Massive</h2>
-      <h2>PostgresSQL</h2>  
-      <h2>Mongoose</h2> 
-      <h2>MongoDB</h2>
-    </div>
-  </section>
+    <section id="skills">
+      <h1>Skills</h1>
+      <div class="skill-list">
+        <h2>Javascript</h2>
+        <h2>React</h2>
+        <h2>CSS</h2>
+        <h2>HTML</h2>
+        <h2>Figma</h2>
+        <h2>Node.js</h2>
+        <h2>Git</h2>
+        <h2>Express</h2>
+        <h2>Massive</h2>
+        <h2>PostgresSQL</h2>
+        <h2>Mongoose</h2>
+        <h2>MongoDB</h2>
+      </div>
+    </section>
 
-  <section id="portfolio">
-    <h1>Portfolio</h1>
+    <section id="portfolio">
+      <h1>Portfolio</h1>
 
-    <div class="project-box">
-      <h3>Cat Chase</h3>
-      <a href="https://cat-chase.herokuapp.com" target="_blank">Site Link</a>
-      <a href="https://github.com/react-game/react-game">GitHub Link</a>
-      <div class="project">
-        <!-- <video width="320" height="240" controls>
+      <div class="project-box">
+        <h3>Cat Chase</h3>
+        <a href="https://cat-chase.herokuapp.com" target="_blank">Site Link</a>
+        <a href="https://github.com/react-game/react-game">GitHub Link</a>
+        <div class="project">
+          <!-- <video width="320" height="240" controls>
             <source src="/assets/most-recent-cat-chase.mp4" type="video/mov">
         </video> -->
-        <img src="assets/game-play.png" alt=""/>
-        <p>
-          A full-stack group project. We created this 2D collision detection game in React, using Javascript for all game logic, MongoDB and Mongoose to store and retrieve the player data and points. It detects which device you're on, as it needs the keyboard to play, and is responsive. 
-          <br/>
-          See if you can beat the high score!
-        </p>
-      </div>
-    </div>
-
-    <div class="project-box">
-        <h3>Colour Curiosity</h3>
-        <a href="http://colour-curiosity.surge.sh/" target="_blank">Site Link</a>
-        <a href="https://github.com/LaraWho/assignments/tree/master/projects/personal-react-site">GitHub Link</a>
-        <div class="project">
-          <img src="assets/colour-c-min.png" alt=""/>
+          <img src="assets/game-play.png" alt="" />
           <p>
-            A front-end project implementing the ColorTag Api for the main use of the app, which is to upload a URL for an image and see a list of the colours which are most prominent in that image. If you particularly love the colours of an image and want to use them to build a colour scheme for any occasion (wedding theme, decorating a room etc) then use my app!
-            I used local storage to save images and colour schemes. You're also able to delete them.
-            There's a little Easter Egg on the home page which will take you to a fun page which displays a random colour theme, from the colr.org API.
+            A full-stack group project. We created this 2D collision detection
+            game in React, using Javascript for all game logic, MongoDB and
+            Mongoose to store and retrieve the player data and points. It
+            detects which device you're on, as it needs the keyboard to play,
+            and is responsive.
+            <br />
+            See if you can beat the high score!
           </p>
         </div>
       </div>
 
-    <div class="project-box">
-      <h3>Time To Travel</h3>
-      <a class="site-link" href="https://www.time-to-travel.fun/" target="_blank">Site Link</a>
-      <a href="https://github.com/LaraWho/new-tardis-travel" target="_blank">GitHub Link</a>
-      <div class="project">
-        <img src="assets/ttt.png" alt=""/>
-        <p>
-          A Doctor Who themed wanderlust journal for travellers, built in React. I made all graphics from scratch in Figma, and animations are pure CSS. I used Bcrypt to safely store and hash passwords, and Nodemailer to notify the user of a successful registration. Awarded Best CSS in my cohort at DevMountain.
-        </p>
+      <div class="project-box">
+        <h3>Colour Curiosity</h3>
+        <a href="http://colour-curiosity.surge.sh/" target="_blank"
+          >Site Link</a
+        >
+        <a
+          href="https://github.com/LaraWho/assignments/tree/master/projects/personal-react-site"
+          >GitHub Link</a
+        >
+        <div class="project">
+          <img src="assets/colour-c-min.png" alt="" />
+          <p>
+            A front-end project implementing the ColorTag Api for the main use
+            of the app, which is to upload a URL for an image and see a list of
+            the colours which are most prominent in that image. If you
+            particularly love the colours of an image and want to use them to
+            build a colour scheme for any occasion (wedding theme, decorating a
+            room etc) then use my app! I used local storage to save images and
+            colour schemes. You're also able to delete them. There's a little
+            Easter Egg on the home page which will take you to a fun page which
+            displays a random colour theme, from the colr.org API.
+          </p>
+        </div>
       </div>
-    </div>    
 
-    <div class="project-box">
-      <h3>Fridge-raiders</h3>
-      <a href="https://fridge-raiders.site/#/" target="_blank">Site Link</a>
-      <a href="https://github.com/Fridgerators/fridgeraider" target="_blank">GitHub Link</a>
-      <div class="project">
-        <img src="assets/desktop-bg.jpg" alt=""/>
-        <p>
-          An inspiration site for the amateur cook. Enter the contents of your fridge and cupboard to see a list of recipes you can cook. My main responsibilities were prototypes and implementing the design and animations in code across different device sizes. I created a color scheme and logo for our ‘Fridge-Raiders’ identity.
-        </p>
+      <div class="project-box">
+        <h3>Time To Travel</h3>
+        <a
+          class="site-link"
+          href="https://www.time-to-travel.fun/"
+          target="_blank"
+          >Site Link</a
+        >
+        <a href="https://github.com/LaraWho/new-tardis-travel" target="_blank"
+          >GitHub Link</a
+        >
+        <div class="project">
+          <img src="assets/ttt.png" alt="" />
+          <p>
+            A Doctor Who themed wanderlust journal for travellers, built in
+            React. I made all graphics from scratch in Figma, and animations are
+            pure CSS. I used Bcrypt to safely store and hash passwords, and
+            Nodemailer to notify the user of a successful registration. Awarded
+            Best CSS in my cohort at DevMountain.
+          </p>
+        </div>
       </div>
-    </div>
 
+      <div class="project-box">
+        <h3>Fridge-raiders</h3>
+        <a href="https://fridge-raiders.site/#/" target="_blank">Site Link</a>
+        <a href="https://github.com/Fridgerators/fridgeraider" target="_blank"
+          >GitHub Link</a
+        >
+        <div class="project">
+          <img src="assets/desktop-bg.jpg" alt="" />
+          <p>
+            An inspiration site for the amateur cook. Enter the contents of your
+            fridge and cupboard to see a list of recipes you can cook. My main
+            responsibilities were prototypes and implementing the design and
+            animations in code across different device sizes. I created a color
+            scheme and logo for our ‘Fridge-Raiders’ identity.
+          </p>
+        </div>
+      </div>
     </section>
 
     <section id="contact">
       <h1>Contact Me</h1>
       <p>
-        I can usually be found working on my Macbook, so delight and distract me with a little message! <br/> <br/>
-        If I'm not working then I might be outside in the horrid sunlight doing normal human things.
+        I can usually be found working on my Macbook, so delight and distract me
+        with a little message! <br />
+        <br />
+        If I'm not working then I might be outside in the horrid sunlight doing
+        normal human things.
       </p>
+      <p>
+        Click the below links to see my linkedIn and GitHub, send me an email,
+        or open my resume:
+      </p>
+
+      <ul class="icons">
+        <li>
+          <a href="https://www.linkedin.com/in/lara-potjewyd" target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </li>
+
+        <li>
+          <a href="https://github.com/LaraWho" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </li>
+
+        <li>
+          <a href="mailto:larapotjewyd@gmail.com"><i class="fas fa-at"></i></a>
+        </li>
+
+        <li>
+          <a href="/lara-potjewyd.pdf" target="_blank" type="application/pdf"
+            ><i class="far fa-file"></i
+          ></a>
+        </li>
+      </ul>
       <p>
         Email: larapotjewyd@gmail.com
       </p>
-      <p>Click the below links to see my linkedIn, GitHub, send me an email, or open my resume:</p>
-
-      <ul class="icons">
-        <li><a href="https://www.linkedin.com/in/lara-potjewyd" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-
-        <li><a href="https://github.com/LaraWho" target="_blank"><i class="fab fa-github"></i></a></li>
-
-        <li><a href="mailto:larapotjewyd@gmail.com"><i class="fas fa-at"></i></a></li>
-
-        <li><a href="assets/lara-potjewyd.pdf" target="_blank"><i class="far fa-file"></i></a></li>
-        
-      </ul>
     </section>
 
-  <script src="app.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
