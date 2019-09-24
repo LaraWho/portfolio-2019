@@ -8,6 +8,16 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --header-font: "Nunito", sans-serif;
+  --text-font: "Open Sans", sans-serif;
+  --header-color: #f5db15;
+  --body-text: #333;
+  --nav-text: #929292;
+  --hover-text: #6d6b6b;
+  --lightgrey-color: #dedede;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -25,14 +35,6 @@ html {
   cursor: pointer;
 }
 
-:root {
-  /* --header-color: rgba(245, 219, 21, 0.8); */
-  --header-color: #f5db15;
-  --body-text: #333;
-  --nav-text: #929292;
-  --hover-text: #6d6b6b;
-}
-
 /* Header */
 header {
   display: flex;
@@ -43,7 +45,6 @@ header {
 #outer-box {
   height: 100vh;
   width: 100vw;
-  /* background-image: url('assets/temp-img.png'); */
   background-image: url("assets/bg.svg");
   background-size: cover;
   background-position: center;
@@ -73,6 +74,7 @@ header {
   line-height: 1em;
   font-weight: 800;
   margin-bottom: 0.1em;
+  font-family: var(--header-font);
 }
 
 .title > h2 {
@@ -95,7 +97,7 @@ nav {
 
 .navbar > h4 {
   cursor: pointer;
-  font-family: "Nunito", sans-serif;
+  font-family: var(--header-font);
   color: var(--nav-text);
   padding: 10px;
   font-weight: 800;
@@ -148,6 +150,7 @@ section > h1 {
   font-weight: 800;
   font-size: 2.5em;
   letter-spacing: 2px;
+  font-family: var(--header-font);
 }
 
 h3 {
@@ -156,13 +159,15 @@ h3 {
   font-size: 1.5em;
   line-height: 20px;
   font-weight: 800;
+  font-family: var(--header-font);
 }
 
 p {
   margin: 20px;
   width: 50vw;
   line-height: 22px;
-  color: #dedede;
+  color: var(--lightgrey-color);
+  font-family: var(--text-font);
 }
 
 /* Skills */
@@ -173,10 +178,15 @@ p {
   display: flex;
   flex-direction: column;
   width: 50vw;
+}
+
+.skill-list > h2 {
+  font-weight: 400;
+  font-family: var(--text-font);
   font-size: 1.5em;
   line-height: 1.5em;
-  letter-spacing: 0.15em;
-  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--lightgrey-color);
 }
 
 /* Portfolio */
@@ -195,18 +205,26 @@ p {
 
 .project > p {
   margin: 20px 0;
-  width: 60vw;
+  width: 80vw;
   line-height: 22px;
+}
+
+.project-box > a {
+  color: var(--lightgrey-color);
+  font-weight: 600;
+}
+
+.project-box > a:hover {
+  color: var(--nav-text);
 }
 
 a {
   text-decoration: none;
   cursor: pointer;
-  font-family: "Nunito", sans-serif;
+  font-family: var(--header-font);
   padding: 2.5px;
   font-weight: 800;
   color: var(--nav-text);
-  /* color: #fff; */
   width: 80vw;
   transition: 0.5s all ease;
 }
@@ -227,7 +245,7 @@ a:hover {
 
 .project {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
 }
@@ -339,6 +357,7 @@ img:hover {
 
   .project {
     flex-direction: row;
+    align-items: center;
   }
 
   .project > p {
