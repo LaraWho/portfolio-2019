@@ -161,7 +161,8 @@ h3 {
 p {
   margin: 20px;
   width: 50vw;
-  line-height: 20px;
+  line-height: 22px;
+  color: #dedede;
 }
 
 /* Skills */
@@ -194,7 +195,8 @@ p {
 
 .project > p {
   margin: 20px 0;
-  width: 80vw;
+  width: 60vw;
+  line-height: 22px;
 }
 
 a {
@@ -347,6 +349,10 @@ img:hover {
   img {
     width: 50%;
     margin-left: 10vw;
+  }
+
+  .project-box {
+    margin-bottom: 45px;
   }
 
   .project-box:nth-of-type(2n) {
