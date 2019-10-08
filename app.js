@@ -28,3 +28,7 @@ scrollToPortfolio = () => {
 scrollToContact = () => {
   contact.scrollIntoView(true);
 };
+
+openSite = project => {
+  window.open(project);
+};
