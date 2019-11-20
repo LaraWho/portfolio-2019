@@ -11,7 +11,7 @@ html {
 :root {
   --header-font: "Nunito", sans-serif;
   --text-font: "Open Sans", sans-serif;
-  --header-color: #f5db15;
+  --header-color: #ffcc00;
   --body-text: #333;
   --nav-text: #929292;
   --hover-text: #6d6b6b;
@@ -55,7 +55,7 @@ header {
 #overlay {
   position: absolute;
   z-index: 1;
-  opacity: 0.4;
+  opacity: 0.7;
   background-color: #333;
   height: 100vh;
   width: 100vw;
@@ -80,7 +80,7 @@ header {
 .title > h2 {
   font-size: 1.5em;
   font-weight: 800;
-  line-height: 1.2em;
+  line-height: 1.4em;
 }
 
 /* Nav Bar */
