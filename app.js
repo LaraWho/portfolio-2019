@@ -1,9 +1,4 @@
 const navbar = document.getElementsByClassName("navbar")[0];
-const title = document.getElementsByClassName("title")[0];
-const about = document.getElementById("about");
-const skills = document.getElementById("skills");
-const portfolio = document.getElementById("portfolio");
-const contact = document.getElementById("contact");
 
 stickyNav = () => {
   if (window.pageYOffset > window.innerHeight) {
@@ -13,21 +8,15 @@ stickyNav = () => {
   }
 };
 
-scrollToAbout = () => {
-  about.scrollIntoView(true);
+scrollToSection = (element) => {
+  const navItemFormatting = element.target.outerText.toLowerCase().replace(/\s+/g, '-');
+  const navItem = document.getElementById(navItemFormatting);
+  navItem.scrollIntoView(true);
 };
 
-scrollToSkills = () => {
-  skills.scrollIntoView(true);
-};
-
-scrollToPortfolio = () => {
-  portfolio.scrollIntoView(true);
-};
-
-scrollToContact = () => {
-  contact.scrollIntoView(true);
-};
+Array.from(navbar.children).forEach(element => {
+  element.addEventListener('click', scrollToSection, false);
+});
 
 openSite = project => {
   window.open(project);

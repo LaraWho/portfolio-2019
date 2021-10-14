@@ -11,14 +11,11 @@
       crossorigin="anonymous"
     />
     <link rel="shortcut icon" type="image/png" href="./ladybird.png" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Nunito:400,600,800"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap"
-      rel="stylesheet"
-    />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Red+Hat+Display:wght@500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="styles.css" />
 
@@ -29,58 +26,50 @@
       <div id="overlay"></div>
       <div class="title">
         <h1>Lara Potjewyd</h1>
-        <br />
         <h2>
-          Designer &
-          <br />
-          Front End Developer
+          Front-End Developer
+        </h2>  
+        <h2>
+          UX/UI Designer
         </h2>
       </div>
     </header>
 
     <nav class="navbar">
-      <h4 onclick="scrollToAbout()">About</h4>
-      <h4 onclick="scrollToSkills()">Strengths</h4>
-      <h4 onclick="scrollToPortfolio()">Portfolio</h4>
-      <h4 onclick="scrollToContact()">Contact</h4>
+      <h4>About</h4>
+      <h4>Skills</h4>
+      <h4>Portfolio</h4>
+      <h4>Contact</h4>
     </nav>
 
     <section id="about">
       <h1>About Me</h1>
       <p>
-        <!-- I built this site using HTML, CSS, and Javascript. I created the background image you saw above in Adobe Illustrator.
-      <br/>
-      <br/> -->
+        <!-- I built this site using HTML, CSS, and Javascript. I created the background image you saw above in Adobe Illustrator.-->
         I love photography, travel, and reading. When travelling I get to take a
         lot of photos of beautiful and interesting things, and read many books!
-        <br />
-        <br />
-        I'm an English self-taught baker who now lives in Salt Lake City, Utah!
-        The last half of my 20s I travelled and worked in various parts of the
-        world.
-        <br />
-        <br />
-        I would like to unite my passions for design and code to create some
+      </p>
+   
+      <p>
+        I unite my passions for design and code to create some
         beautiful and functional websites.
-        <br />
-        <br />
-        Currently looking for opportunities to expand on my design skills.
       </p>
     </section>
 
     <section id="skills">
-      <h1>Strengths</h1>
+      <h1>Skills</h1>
       <div class="skill-list">
-        <h2>Figma & Illustrator</h2>
+        <h2>Figma</h2>
         <h2>Visual design</h2>
-        <h2>Empathy</h2>
-        <h2>Attention to detail</h2>
-        <h2>Growth mindset</h2>
         <h2>CSS</h2>
-        <h2>Styled Components</h2>
-        <h2>React</h2>
-        <h2>Javascript</h2>
         <h2>HTML</h2>
+        <h2>Javascript</h2>
+        <h2>React</h2>
+        <h2>Styled Components</h2>
+        <h2>Express</h2>
+        <h2>Node</h2>
+        <h2>MongoDB</h2>
+        <h2>PostgreSQL</h2>
       </div>
     </section>
 
@@ -100,20 +89,19 @@
             onclick="openSite('https://www.figma.com/file/Q3byTrYD8Qx31lbpJUzO1R/AKNF-Favourites?node-id=0%3A1')"
             alt="All Killa No Filla home page image"
           />
-          <p>
-            A design for a website I have yet to build.
-            <br />
-            <br />
-            'All Killa No Filla' is a podcast by two comediennes who have a
-            shared interest in serial killers. There are often tangents in the
-            conversation so it's not all morbid.
-            <br />
-            <br />
-            When I first discovered them I needed to visit three different sites
-            to find out who they are, where to listen to the podcast, and where
-            they're touring. My motivation is to create a site for their fans
-            and newcomers.
-          </p>
+          <div class="project-info">
+            <p>
+              'All Killa No Filla' is a podcast by two comedians who have a
+              shared interest in serial killers. There are often tangents in the
+              conversation so it's not all morbid.
+            </p>
+            <p>
+              When I first discovered them I needed to visit three different sites
+              to find out who they are, where to listen to the podcast, and where
+              they're touring. My motivation is to create a site for their fans
+              and newcomers.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -135,20 +123,22 @@
             onclick="openSite('https://cat-chase.herokuapp.com')"
             alt="game play image"
           />
-          <p>
-            A full-stack group project. We created this 2D collision detection
-            game in React, using Javascript for all game logic, MongoDB and
-            Mongoose to store and retrieve the player data and points.
-            <br />
-            <br />
-            It detects which device you're on, as it needs the keyboard to play,
-            and is responsive. I handled all the design and styling and wrote
-            the logic for the movement of the cat, generation of the fish, and
-            assisted with the movements of the dog you must evade!
-            <br />
-            <br />
-            See if you can beat the high score!
-          </p>
+          <div class="project-info">
+            <p>
+              A full-stack group project. We created this 2D collision detection
+              game in React, using Javascript for all game logic, MongoDB and
+              Mongoose to store and retrieve the player data and points.
+            </p>
+            <p>
+              It detects which device you're on, as it needs the keyboard to play,
+              and is responsive. I handled all the design and styling and wrote
+              the logic for the movement of the cat, generation of the fish, and
+              assisted with the movements of the dog you must evade!
+            </p>
+            <p>
+              See if you can beat the high score!
+            </p>
+          </div>
         </div>
       </div>
 
@@ -172,19 +162,21 @@
             onclick="openSite('https://geoffrey-potjewyd.herokuapp.com')"
             alt="home page image"
           />
-          <p>
-            I created a CMS from scratch using React, MongoDB, Mongoose,
-            Express, Styled Components, and React-Quill.
-            <br />
-            <br />
-            My brother asked me for a portfolio site which he could handle the
-            uploading and editing of the science articles he writes.
-            <br />
-            <br />
-            I used JSON Web Tokens for his user authentication. Once he's logged
-            in he can add, edit, and delete all content. A non-logged in user
-            can browse the site and see all content.
-          </p>
+          <div class="project-info">
+            <p>
+              I created a CMS from scratch using React, MongoDB, Mongoose,
+              Express, Styled Components, and React-Quill.
+            </p>
+            <p>
+              This is a blog site for my brother to handle the
+              uploading and editing of the science articles he writes.
+            </p>
+            <p>
+              I used JSON Web Tokens for his user authentication. Once he's logged
+              in he can add, edit, and delete all content. A non-logged in user
+              can browse the site and see all content.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -211,21 +203,21 @@
             onclick="openSite('https://www.time-to-travel.fun/')"
             alt="Landing page image"
           />
-          <p>
-            A Doctor Who themed wanderlust journal for travellers, built in
-            React.
-            <br />
-            <br />
-            I made all graphics from scratch in Figma, and animations are pure
-            CSS.
-            <br />
-            <br />
-            I used Bcrypt to safely store and hash passwords, and Nodemailer to
-            notify the user of a successful registration. Awarded Best CSS in my
-            cohort at DevMountain.
-            <br />
-            <br />
-          </p>
+          <div class="project-info">
+            <p>
+              A Doctor Who themed wanderlust journal for travellers, built in
+              React.
+            </p>
+            <p>
+              I made all graphics from scratch in Figma, and animations are pure
+              CSS.
+            </p>
+            <p>
+              I used Bcrypt to safely store and hash passwords, and Nodemailer to
+              notify the user of a successful registration. Awarded Best CSS in my
+              cohort at DevMountain.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -249,15 +241,17 @@
             onclick="openSite('https://fridge-raiders.herokuapp.com/#/')"
             alt="Landing page image"
           />
-          <p>
-            An inspiration site for the amateur cook. Enter the contents of your
-            fridge and cupboard to see a list of recipes you can cook.
-            <br />
-            <br />
-            My main responsibilities were prototypes and implementing the design
-            and animations in code across different device sizes. I created a
-            color scheme and logo for our ‘Fridge-Raiders’ identity.
-          </p>
+          <div class="project-info">
+            <p>
+              An inspiration site for the amateur cook. Enter the contents of your
+              fridge and cupboard to see a list of recipes you can cook.
+            </p>
+            <p>
+              My main responsibilities were prototypes and implementing the design
+              and animations in code across different device sizes. I created a
+              color scheme and logo for our ‘Fridge-Raiders’ identity.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -277,20 +271,22 @@
             onclick="openSite('http://colour-curiosity.surge.sh/')"
             alt="home page image"
           />
-          <p>
-            A front-end project implementing the ColorTag Api for the main use
-            of the app, which is to upload a URL for an image and see a list of
-            the colours which are most prominent in that image. If you
-            particularly love the colours of an image and want to use them to
-            build a colour scheme for any occasion (wedding theme, decorating a
-            room etc) then use my app!
-            <br />
-            <br />
-            I used local storage to save images and colour schemes. You're also
-            able to delete them. There's a little Easter Egg on the home page
-            which will take you to a fun page which displays a random colour
-            theme, from the colr.org API.
-          </p>
+          <div class="project-info">
+            <p>
+              A front-end project implementing the ColorTag Api for the main use
+              of the app, which is to upload a URL for an image and see a list of
+              the colours which are most prominent in that image. If you
+              particularly love the colours of an image and want to use them to
+              build a colour scheme for any occasion (wedding theme, decorating a
+              room etc) then use my app!
+            </p>
+            <p>
+              I used local storage to save images and colour schemes. You're also
+              able to delete them. There's a little Easter Egg on the home page
+              which will take you to a fun page which displays a random colour
+              theme, from the colr.org API.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -300,12 +296,8 @@
       <p>
         I can usually be found working on my Macbook, so delight and distract me
         with a little message!
-        <br />
-        <br />
-        If I'm not working then I might be outside in the horrid sunlight doing
-        normal human things.
-        <br />
-        <br />
+      </p>
+      <p>
         Click the below links to see my linkedIn and GitHub, send me an email,
         or open my resume:
       </p>
