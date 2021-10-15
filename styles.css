@@ -1,7 +1,7 @@
 body {
   font-family: 'Red Hat Display', sans-serif;
   font-size: 16px;
-  background-color: #FFFFFF;
+  background-color: #f9f9f9;
   overflow-x: hidden;
 }
 
@@ -12,14 +12,91 @@ html {
 :root {
   --header-font: 'Red Hat Display', sans-serif;
   --text-font: 'Montserrat', sans-serif;
+  
+  /* Light Mode Colours */
   --header-color: #7B84C7;
   --subtitle-light: #a6acd9;
   --subtitle-dark: #646db4;
   --body-text: #535465;
   --nav-text: #f1f2f3;
-  --hover-text: #6D6F84;
+  --nav-bg-color: #7B84C7;
+  --hover-color: #6D6F84;
   --overlay-color: #3c3c3c;
+
+  /* Dark Mode Colours */
+  --dark-header-color: #7B84C7;
+  --dark-subtitle-light: #a6acd9;
+  --dark-subtitle-dark: #646db4;
+  --dark-nav-text: #535465;
+  --dark-nav-bg-color: #2e314d;
+  --dark-body-text: #f1f2f3;
+  --dark-hover-color: #d2d5f3;
+  --dark-background-even: #1f202e;
+  --dark-background-odd: #252737;
 }
+
+.dark-mode img {
+  filter: brightness(0.8) contrast(1.2);
+}
+
+.dark-mode img:hover {
+  transform: translateY(-5px);
+  filter: brightness(0.8) contrast(1.2) drop-shadow(0 14px 28px rgba(0, 0, 0, 0.25))
+    drop-shadow(0 10px 10px rgba(0, 0, 0, 0.22));
+}
+
+.dark-mode #overlay {
+  background-color: var(--dark-background-even);
+  opacity: 0.9;
+}
+
+.dark-mode p, .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode .project-box > a, .dark-mode .skill-list > h2, .dark-mode .navbar > h4 {
+  color: var(--dark-body-text);
+}
+
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode .navbar > h4, .dark-mode .fa-arrow-alt-circle-up:before, .dark-mode a {
+  color: var(--dark-subtitle-light);
+}
+
+.dark-mode .navbar > h4:hover, .dark-mode a:hover, .dark-mode .fa-arrow-alt-circle-up:hover::before {
+  color: var(--dark-hover-color);
+}
+
+.dark-mode .project-box > a:hover {
+  color: var(--dark-hover-color);
+  text-decoration: underline;
+}
+
+.dark-mode nav {
+  background-color: var(--dark-nav-bg-color);
+}
+
+.dark-mode section:nth-of-type(even) {
+  background-color: var(--dark-background-even);
+}
+
+.dark-mode section:nth-of-type(odd), .dark-mode {
+  background-color: var(--dark-background-odd);
+}
+
+/* dark mode toggle */
+#toggle-container {
+  width: 95vw;
+  text-align: right;
+}
+
+#toggle {
+  margin-right: 16px;
+  margin-top: 32px;
+  background-image: url('assets/lightbulb-off.png');
+  width: 85px;
+  height: auto;
+}
+
+.dark-mode #toggle {
+  filter: brightness(1) contrast(1);
+}
+/* end dark mode toggle */
 
 /* width */
 ::-webkit-scrollbar {
@@ -33,7 +110,7 @@ html {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--header-color);
+  background: var(--subtitle-light);
   border-radius: 10px;
   cursor: pointer;
 }
@@ -59,7 +136,6 @@ header {
   position: absolute;
   z-index: 1;
   opacity: 0.85;
-  /* background-color: #10111a; */
   background-color: var(--overlay-color);
   height: 100vh;
   width: 100vw;
@@ -95,7 +171,7 @@ nav {
   align-items: center;
   width: 100vw;
   height: 10vh;
-  background-color: var(--header-color);
+  background-color: var(--nav-bg-color);
   font-size: 1em;
   text-transform: lowercase;
   letter-spacing: 1.5px;
@@ -110,7 +186,7 @@ nav {
 }
 
 .navbar > h4:hover {
-  color: var(--hover-text);
+  color: var(--hover-color);
 }
 
 .scrolled {
@@ -167,10 +243,13 @@ p {
   font-family: var(--text-font);
 }
 
-/* Skills */
-/* #skills {
-} */
+/* About */
 
+#about {
+  height: 80vh;
+}
+
+/* Skills */
 .skill-list {
   display: flex;
   flex-direction: column;
@@ -226,7 +305,8 @@ p {
 }
 
 .project-box > a:hover {
-  color: var(--hover-text);
+  color: var(--hover-color);
+  text-decoration: underline;
 }
 
 a {
@@ -241,7 +321,7 @@ a {
 }
 
 a:hover {
-  color: var(--hover-text);
+  color: var(--hover-color);
 }
 
 .project-box {
@@ -267,7 +347,7 @@ img {
   margin-top: 20px;
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.12))
     drop-shadow(0 1px 2px rgba(0, 0, 0, 0.24));
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: filter 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 img:hover {
@@ -302,7 +382,7 @@ img:hover {
 }
 
 .fa-arrow-alt-circle-up:hover::before {
-  color: var(--hover-text);
+  color: var(--hover-color);
 }
 
 @media only screen and (max-width: 380px) {
@@ -351,6 +431,11 @@ img:hover {
     line-height: 1.5em;
   }
 
+  #about {
+    height: 60vh;
+    margin-bottom: 48px;
+  }
+
   .fa-arrow-alt-circle-up:before {
     cursor: pointer;
     right: 1em;
@@ -396,7 +481,8 @@ img:hover {
   }
 
   .project-box {
-    margin-bottom: 45px;
+    margin-bottom: 48px;
+    margin-top: 48px;
   }
 
   .project-box:nth-of-type(2n) {

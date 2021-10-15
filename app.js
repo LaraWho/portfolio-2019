@@ -1,9 +1,9 @@
 const navbar = document.getElementsByClassName("navbar")[0];
 
 stickyNav = () => {
-  if (window.pageYOffset > window.innerHeight) {
+  if (window.scrollY > window.innerHeight) {
     navbar.classList.add("scrolled");
-  } else if (window.pageYOffset < window.innerHeight) {
+  } else if (window.scrollY < window.innerHeight) {
     navbar.classList.remove("scrolled");
   }
 };
@@ -18,6 +18,19 @@ Array.from(navbar.children).forEach(element => {
   element.addEventListener('click', scrollToSection, false);
 });
 
-openSite = project => {
+openSite = (project) => {
   window.open(project);
 };
+
+toggleDarkMode = () => {
+  const pageBody = document.body;
+  const lightBulb = document.getElementById("toggle");
+
+  if (lightBulb.src.match("on")) {
+    lightBulb.src = "assets/lightbulb-off.png"
+  } else {
+    lightBulb.src = "assets/lightbulb-on.png"
+  }
+
+  pageBody.classList.toggle("dark-mode");
+}
