@@ -64,7 +64,6 @@ html {
 
 .dark-mode .project-box > a:hover {
   color: var(--dark-hover-color);
-  text-decoration: underline;
 }
 
 .dark-mode nav {
@@ -353,11 +352,19 @@ p {
 .project-box > a {
   color: var(--body-text);
   font-weight: 600;
+  margin-top: 8px;
+}
+
+.project-box > a:first-of-type {
+  margin-top: 0px;
+}
+
+.project-box > a:last-of-type {
+  margin-bottom: 0px;
 }
 
 .project-box > a:hover {
   color: var(--hover-color);
-  text-decoration: underline;
 }
 
 a {
@@ -381,8 +388,9 @@ a:hover {
   align-items: center;
 }
 
-.project-box > h3 {
+.project-box > h3 a {
   margin-bottom: 10px;
+  padding: 0 0 2px 0;
 }
 
 .project {
