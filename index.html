@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <meta property="og:title" content="Lara Potjewyd's Portfolio">
+    <meta property="og:description" content="Lara Potjewyd's Portfolio">
+    <meta property="og:image" content="http://lara-potjewyd.surge.sh/assets/meta-og-thumbnail.jpg">
+    <meta property="og:image:type" content="image/jpg"/>
+    <meta property="og:image:width" content="1024"/>
+    <meta property="og:image:height" content="768"/>
+    <meta property="og:url" content="http://lara-potjewyd.surge.sh/">
+
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -36,14 +45,15 @@
     </header>
 
     <nav class="navbar">
-      <h4>About</h4>
-      <h4>Skills</h4>
-      <h4>Portfolio</h4>
-      <h4>Contact</h4>
+      <h4><a href="#about">About</a></h4>
+      <h4><a href="#skills">Skills</a></h4>
+      <h4><a href="#portfolio">Portfolio</a></h4>
+      <h4><a href="#contact">Contact</a></h4>
     </nav>
 
     <div id="toggle-container" onclick="toggleDarkMode()">
-      <img id="toggle" src="assets/lightbulb-off.png" alt="Dark mode switch" />
+      <img id="toggle-on" src="assets/lightbulb-on.png" alt="Light mode switch" />
+      <img id="toggle-off" class="dark-mode" src="assets/lightbulb-off.png" alt="Dark mode switch" />
     </div>
     
     <section id="about">
@@ -62,18 +72,25 @@
 
     <section id="skills">
       <h1>Skills</h1>
-      <div class="skill-list">
-        <h2>Figma</h2>
-        <h2>Visual design</h2>
-        <h2>CSS</h2>
-        <h2>HTML</h2>
-        <h2>Javascript</h2>
-        <h2>React</h2>
-        <h2>Styled Components</h2>
-        <h2>Express</h2>
-        <h2>Node</h2>
-        <h2>MongoDB</h2>
-        <h2>PostgreSQL</h2>
+      <div class="skills-container">
+        <div class="skill-list">
+          <h3>UX/UI</h3>
+          <h2>Figma</h2>
+          <h2>Adobe Creative Suite</h2>
+          <h2>Visual & digital design</h2>
+          <h2>Research</h2>
+          <h2>Wireframing</h2>
+          <h2>Prototyping</h2>
+        </div>
+        <div class="skill-list">
+          <h3>Front-End</h3>
+          <h2>CSS</h2>
+          <h2>HTML</h2>
+          <h2>Javascript</h2>
+          <h2>React</h2>
+          <h2>Styled Components</h2>
+          <h2></h2>
+        </div>
       </div>
     </section>
 
@@ -85,7 +102,7 @@
         <a
           href="https://www.figma.com/file/Q3byTrYD8Qx31lbpJUzO1R/AKNF-Favourites?node-id=0%3A1"
           target="_blank"
-          >See prototypes in Figma</a
+          >Figma designs</a
         >
         <div class="project">
           <img
@@ -111,15 +128,9 @@
 
       <div class="project-box">
         <h3>Cat Chase</h3>
-        <a href="https://cat-chase.herokuapp.com" target="_blank">Site Link</a>
+        <a href="https://cat-chase.herokuapp.com" target="_blank">Site link</a>
         <a href="https://github.com/react-game/react-game" target="_blank"
-          >GitHub Link</a
-        >
-        <a
-          class="site-link"
-          href="https://www.figma.com/file/bIcPdQjWhSRyoYFIHoF0rP/Adobe-Illustrator-Imported-SVGs?node-id=0%3A1"
-          target="_blank"
-          >See control SVGs created in Adobe Illustrator</a
+          >GitHub link</a
         >
         <div class="project">
           <img
@@ -149,16 +160,10 @@
       <div class="project-box">
         <h3>Science Portfolio Site</h3>
         <a href="https://geoffrey-potjewyd.herokuapp.com" target="_blank"
-          >Site Link</a
+          >Site link</a
         >
         <a href="https://github.com/LaraWho/blog-project" target="_blank"
-          >GitHub Link</a
-        >
-        <a
-          class="site-link"
-          href="https://www.figma.com/file/9bTTgzAtZYkrHROFmKzqY8/Brain-drawing-imported-from-Illustrator?node-id=0%3A1"
-          target="_blank"
-          >See the brain I created using a drawing tablet</a
+          >GitHub link</a
         >
         <div class="project">
           <img
@@ -190,16 +195,16 @@
           class="site-link"
           href="https://www.time-to-travel.fun/"
           target="_blank"
-          >Site Link</a
+          >Site link</a
         >
         <a href="https://github.com/LaraWho/new-tardis-travel" target="_blank"
-          >GitHub Link</a
+          >GitHub link</a
         >
         <a
           class="site-link"
           href="https://www.figma.com/file/dNfEyRGZXdLIWa7a1OFKaoqh/Mobile-Time-to-Travel-Prototype?node-id=0%3A1"
           target="_blank"
-          >See prototypes</a
+          >Figma designs</a
         >
         <div class="project">
           <img
@@ -228,16 +233,10 @@
       <div class="project-box">
         <h3>Fridge-raiders</h3>
         <a href="https://fridge-raiders.herokuapp.com/#/" target="_blank"
-          >Site Link</a
+          >Site link</a
         >
         <a href="https://github.com/Fridgerators/fridgeraider" target="_blank"
-          >GitHub Link</a
-        >
-        <a
-          class="site-link"
-          href="https://www.figma.com/file/XtxFEv1gODWPPFL8Q7ElS49D/Fridge-raiders-colour-palette?node-id=0%3A1"
-          target="_blank"
-          >See colour scheme and logo</a
+          >GitHub link</a
         >
         <div class="project">
           <img
@@ -262,12 +261,12 @@
       <div class="project-box">
         <h3>Colour Curiosity</h3>
         <a href="http://colour-curiosity.surge.sh/" target="_blank"
-          >Site Link</a
+          >Site link</a
         >
         <a
           href="https://github.com/LaraWho/assignments/tree/master/projects/personal-react-site"
           target="_blank"
-          >GitHub Link</a
+          >GitHub link</a
         >
         <div class="project">
           <img
@@ -298,8 +297,7 @@
     <section id="contact">
       <h1>Contact Me</h1>
       <p>
-        I can usually be found working on my Macbook, so delight and distract me
-        with a little message!
+        I can usually be found working on my Macbook, so delight and distract me with a little message!
       </p>
       <p>
         Click the below links to see my linkedIn and GitHub, send me an email,

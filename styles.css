@@ -83,17 +83,44 @@ html {
 #toggle-container {
   width: 95vw;
   text-align: right;
+  position: relative;
 }
 
-#toggle {
-  margin-right: 16px;
-  margin-top: 32px;
-  background-image: url('assets/lightbulb-off.png');
-  width: 85px;
+#toggle-on, #toggle-off {
+  position: absolute;
+  right: 16px;
+  background-color: transparent;
+  width: 65px;
   height: auto;
+  transition: opacity .35s ease;
 }
 
-.dark-mode #toggle {
+#toggle-on:hover, #toggle-off:hover {
+  transform: none;
+  filter: brightness(1);
+}
+
+#toggle-on {
+  background-image: url('assets/lightbulb-on.png');
+} 
+
+#toggle-off {
+  background-image: url('assets/lightbulb-off.png');
+} 
+
+.dark-mode .dark-mode#toggle-off {
+  opacity: 1;
+} 
+
+#toggle-off {
+  opacity: 0;
+}
+
+#toggle-on:not(.dark-mode) {
+  opacity: 0;
+}
+
+.dark-mode#toggle-off {
   filter: brightness(1) contrast(1);
 }
 /* end dark mode toggle */
@@ -129,7 +156,6 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 #overlay {
@@ -152,7 +178,7 @@ header {
   font-size: 3.5em;
   line-height: 1em;
   font-weight: 800;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   font-family: var(--header-font);
   color: var(--header-color);
 }
@@ -161,6 +187,7 @@ header {
   font-size: 2em;
   line-height: 1.25em;
   text-transform: capitalize;
+  margin: 8px 0;
   color: var(--subtitle-light);
 }
 
@@ -177,16 +204,24 @@ nav {
   letter-spacing: 1.5px;
 }
 
-.navbar > h4 {
+.navbar h4 a {
   cursor: pointer;
   font-family: var(--header-font);
   color: var(--nav-text);
+  font-weight: 400;
   padding: 8px;
   transition: 0.35s all ease;
+  padding: 0 0 2px 0;
+  border-bottom: 2px solid transparent;
 }
 
 .navbar > h4:hover {
   color: var(--hover-color);
+}
+
+.navbar h4 a.active {
+  color: var(--dark-body-text);
+  border-bottom: 2px solid var(--dark-body-text);
 }
 
 .scrolled {
@@ -215,7 +250,7 @@ section:nth-of-type(odd) {
   background-color: #f9f9f9;
 }
 
-section > h1 {
+section h1 {
   margin: 16px;
   width: 80vw;
   max-width: 600px;
@@ -250,11 +285,27 @@ p {
 }
 
 /* Skills */
-.skill-list {
+
+.skills-container {
   display: flex;
   flex-direction: column;
+}
+
+.skill-list {
   width: 80vw;
-  max-width: 600px;
+  height: auto;
+  max-width: 400px;
+  margin: 16px;
+}
+
+#skills {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-list h3 {
+  margin-left: 0px;
+  max-width: 350px;
 }
 
 .skill-list > h2 {
@@ -425,6 +476,10 @@ img:hover {
 
 @media only screen and (min-width: 760px) {
 
+  #toggle-on, #toggle-off {
+    width: 85px;
+  }
+
   #about p,
   #contact p, #skills h2 {
     font-size: 1.25em;
@@ -432,8 +487,30 @@ img:hover {
   }
 
   #about {
-    height: 60vh;
+    height: 100vh;
     margin-bottom: 48px;
+  }
+
+  /* Skills */
+  .skill-list {
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+    height: 50vh;
+    max-width: 400px;
+    margin: 16px;
+  }
+
+  .skills-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #skills > h1 {
+    width: 70vw;
+    max-width: 800px;
+    margin-left: -16px;
+    margin-top: 10vh;
   }
 
   .fa-arrow-alt-circle-up:before {
@@ -483,6 +560,10 @@ img:hover {
   .project-box {
     margin-bottom: 48px;
     margin-top: 48px;
+  }
+
+  .project-box:first-of-type {
+    margin-top: 24px;
   }
 
   .project-box:nth-of-type(2n) {
