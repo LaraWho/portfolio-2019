@@ -36,18 +36,18 @@ html {
 }
 
 .dark-mode img {
-  filter: brightness(0.8) contrast(1.2);
+  filter: brightness(0.85) contrast(1.1);
 }
 
 .dark-mode img:hover {
-  transform: translateY(-5px);
-  filter: brightness(0.8) contrast(1.2) drop-shadow(0 14px 28px rgba(0, 0, 0, 0.25))
+  transform: translateY(-4px);
+  filter: brightness(0.95) contrast(1.1) drop-shadow(0 14px 28px rgba(0, 0, 0, 0.25))
     drop-shadow(0 10px 10px rgba(0, 0, 0, 0.22));
 }
 
 .dark-mode #overlay {
   background-color: var(--dark-background-even);
-  opacity: 0.9;
+  opacity: 0.75;
 }
 
 .dark-mode p, .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode .project-box > a, .dark-mode .skill-list > h2, .dark-mode .navbar > h4 {
@@ -149,7 +149,7 @@ header {
 }
 
 #outer-box {
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   background-image: url("assets/bg-blue-01.svg");
   background-size: cover;
@@ -159,17 +159,18 @@ header {
 
 #overlay {
   position: absolute;
-  z-index: 1;
+  top: 0;
   opacity: 0.85;
   background-color: var(--overlay-color);
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
+  transition: background-color .15s ease;
 }
 
 .title {
   text-transform: uppercase;
   z-index: 2;
-  width: 80vw;
+  width: 90vw;
   letter-spacing: 3px;
 }
 
@@ -177,7 +178,7 @@ header {
   font-size: 3.5em;
   line-height: 1em;
   font-weight: 800;
-  margin-bottom: 24px;
+  margin: 24px 16px;
   font-family: var(--header-font);
   color: var(--header-color);
 }
@@ -186,7 +187,7 @@ header {
   font-size: 2em;
   line-height: 1.25em;
   text-transform: capitalize;
-  margin: 8px 0;
+  margin: 4px 16px;
   color: var(--subtitle-light);
 }
 
@@ -201,6 +202,13 @@ nav {
   font-size: 1em;
   text-transform: lowercase;
   letter-spacing: 1.5px;
+  transition: background-color .15s ease;
+}
+
+.navbar {
+  position: sticky;
+  z-index: 5;
+  top: 0;
 }
 
 .navbar h4 a {
@@ -223,12 +231,6 @@ nav {
   border-bottom: 2px solid var(--dark-body-text);
 }
 
-.scrolled {
-  position: sticky;
-  top: 0;
-  z-index: 5;
-}
-
 /* About, Skills */
 section {
   width: 100vw;
@@ -243,10 +245,12 @@ section {
 
 section:nth-of-type(even) {
   background-color: #f1f2f3;
+  transition: background-color .15s ease;
 }
 
 section:nth-of-type(odd) {
   background-color: #f9f9f9;
+  transition: background-color .15s ease;
 }
 
 section h1 {
@@ -257,6 +261,7 @@ section h1 {
   font-size: 2.5em;
   letter-spacing: 2px;
   font-family: var(--header-font);
+  transition: color .15s ease;
 }
 
 h3 {
@@ -275,6 +280,7 @@ p {
   max-width: 600px;
   color: var(--body-text);
   font-family: var(--text-font);
+  transition: color .15s ease;
 }
 
 /* About */
@@ -411,7 +417,7 @@ img {
 
 img:hover {
   cursor: pointer;
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.25))
     drop-shadow(0 10px 10px rgba(0, 0, 0, 0.22));
 }

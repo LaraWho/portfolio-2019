@@ -30,26 +30,26 @@
 
     <title>Lara Potjewyd</title>
   </head>
-  <body onscroll="stickyNav()" class="dark-mode">
-    <header id="outer-box">
-      <div id="overlay"></div>
-      <div class="title">
-        <h1>Lara Potjewyd</h1>
-        <h2>
-          Front-End Developer
-        </h2>  
-        <h2>
-          UX/UI Designer
-        </h2>
-      </div>
-    </header>
-
+  <body class="dark-mode">
+      <header id="outer-box">
+        <div id="overlay"></div>
+        <div class="title">
+            <h1>Lara Potjewyd</h1>
+            <h2>
+              Front-End Developer
+            </h2>  
+            <h2>
+              UX/UI Designer
+          </h2>
+        </div>
+      </header>
     <nav class="navbar">
       <h4><a href="#about">About</a></h4>
       <h4><a href="#skills">Skills</a></h4>
       <h4><a href="#portfolio">Portfolio</a></h4>
       <h4><a href="#contact">Contact</a></h4>
     </nav>
+
 
     <div id="toggle-container" onclick="toggleDarkMode()">
       <img id="toggle-on" src="assets/lightbulb-on.png" alt="Light mode switch" />
@@ -88,14 +88,68 @@
           <h2>HTML</h2>
           <h2>Javascript</h2>
           <h2>React</h2>
+          <h2>CSS Animations</h2>
           <h2>Styled Components</h2>
-          <h2></h2>
+          <h2>Salesforce</h2>
         </div>
       </div>
     </section>
 
     <section id="portfolio">
       <h1>Portfolio</h1>
+
+      <div class="project-box">
+        <h3><a href="https://shop.helpcloud.com/" target="_blank">HelpCloud Shop</a></h3>
+        <a href="https://shop.helpcloud.com/" target="_blank">Site link</a>
+
+        <div class="project">
+          <img
+            src="assets/helpcloud-shop.png"
+            onclick="openSite('https://shop.helpcloud.com/')"
+            alt="Home page of shop.helpcloud.com"
+          />
+          <div class="project-info">
+            <p>
+              I designed and coded our company merchandise site using Shopify and their Liquid language. I created custom components which can be reused and modified through the Shopify theme editor.  
+            </p>
+            <p>
+              We wanted to target our YouTube demographic with a fun and eye-catching design.
+            </p>
+            <p>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-box">
+        <h3><a href="https://cat-chase.surge.sh/" target="_blank">Cat Chase</a></h3>
+        <a href="https://cat-chase.surge.sh/" target="_blank">Site link</a>
+        <a href="https://github.com/react-game/react-game" target="_blank"
+          >GitHub link</a
+        >
+        <div class="project">
+          <img
+            src="assets/game-play.png"
+            onclick="openSite('https://cat-chase.surge.sh/')"
+            alt="game play image"
+          />
+          <div class="project-info">
+            <p>
+              We created this 2D collision detection
+              game in React, using Javascript for all game logic.
+            </p>
+            <p>
+              It detects which device you're on, as it needs the keyboard to play,
+              and is responsive. I handled all the design and styling and wrote
+              the logic for the movement of the cat, generation of the fish, and
+              assisted with the movements of the dog you must evade!
+            </p>
+            <p>
+              See if you can beat the high score!
+            </p>
+          </div>
+        </div>
+      </div>
 
       <div class="project-box">
         <h3>All Killa No Filla Website Design</h3>
@@ -121,37 +175,6 @@
               to find out who they are, where to listen to the podcast, and where
               they're touring. My motivation is to create a site for their fans
               and newcomers.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-box">
-        <h3><a href="https://cat-chase.herokuapp.com" target="_blank">Cat Chase</a></h3>
-        <a href="https://cat-chase.herokuapp.com" target="_blank">Site link</a>
-        <a href="https://github.com/react-game/react-game" target="_blank"
-          >GitHub link</a
-        >
-        <div class="project">
-          <img
-            src="assets/game-play.png"
-            onclick="openSite('https://cat-chase.herokuapp.com')"
-            alt="game play image"
-          />
-          <div class="project-info">
-            <p>
-              A full-stack group project. We created this 2D collision detection
-              game in React, using Javascript for all game logic, MongoDB and
-              Mongoose to store and retrieve the player data and points.
-            </p>
-            <p>
-              It detects which device you're on, as it needs the keyboard to play,
-              and is responsive. I handled all the design and styling and wrote
-              the logic for the movement of the cat, generation of the fish, and
-              assisted with the movements of the dog you must evade!
-            </p>
-            <p>
-              See if you can beat the high score!
             </p>
           </div>
         </div>
@@ -189,7 +212,7 @@
           </div>
         </div>
       </div>
-
+<!-- 
       <div class="project-box">
         <h3><a class="site-link"
           href="https://www.time-to-travel.fun/"
@@ -212,7 +235,7 @@
           <img
             src="assets/ttt.png"
             onclick="openSite('https://www.time-to-travel.fun/')"
-            alt="Landing page image"
+            alt="Home page image"
           />
           <div class="project-info">
             <p>
@@ -231,6 +254,7 @@
           </div>
         </div>
       </div>
+  -->
 
       <div class="project-box">
         <h3><a href="https://fridge-raiders.herokuapp.com/#/" target="_blank"
@@ -246,7 +270,7 @@
           <img
             src="assets/desktop-bg.jpg"
             onclick="openSite('https://fridge-raiders.herokuapp.com/#/')"
-            alt="Landing page image"
+            alt="Home page image"
           />
           <div class="project-info">
             <p>
@@ -262,42 +286,6 @@
         </div>
       </div>
 
-      <div class="project-box">
-        <h3><a href="http://colour-curiosity.surge.sh/" target="_blank"
-          >Colour Curiosity</a
-        ></h3>
-        <a href="http://colour-curiosity.surge.sh/" target="_blank"
-          >Site link</a
-        >
-        <a
-          href="https://github.com/LaraWho/assignments/tree/master/projects/personal-react-site"
-          target="_blank"
-          >GitHub link</a
-        >
-        <div class="project">
-          <img
-            src="assets/colour-c-min.png"
-            onclick="openSite('http://colour-curiosity.surge.sh/')"
-            alt="home page image"
-          />
-          <div class="project-info">
-            <p>
-              A front-end project implementing the ColorTag Api for the main use
-              of the app, which is to upload a URL for an image and see a list of
-              the colours which are most prominent in that image. If you
-              particularly love the colours of an image and want to use them to
-              build a colour scheme for any occasion (wedding theme, decorating a
-              room etc) then use my app!
-            </p>
-            <p>
-              I used local storage to save images and colour schemes. You're also
-              able to delete them. There's a little Easter Egg on the home page
-              which will take you to a fun page which displays a random colour
-              theme, from the colr.org API.
-            </p>
-          </div>
-        </div>
-      </div>
     </section>
 
     <section id="contact">

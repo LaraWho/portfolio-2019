@@ -1,12 +1,3 @@
-stickyNav = () => {
-  const navbar = document.getElementsByClassName("navbar")[0];
-  if (window.scrollY > window.innerHeight) {
-    navbar.classList.add("scrolled");
-  } else if (window.scrollY < window.innerHeight) {
-    navbar.classList.remove("scrolled");
-  }
-};
-
 window.addEventListener("scroll", highlightNav = () => {
   const sections = document.querySelectorAll("section[id]");
   const scrollY = window.scrollY;
