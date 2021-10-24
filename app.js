@@ -26,3 +26,9 @@ toggleDarkMode = () => {
   lightBulbOff.classList.toggle("dark-mode");
   pageBody.classList.toggle("dark-mode");
 };
+
+showIframe = () => {
+  console.log('iframe loaded');
+  const iFrame = document.getElementById("iFrame");
+  iFrame.style.opacity = 1;
+};
