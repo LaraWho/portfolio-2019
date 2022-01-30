@@ -131,6 +131,10 @@ html {
 }
 /* end dark mode toggle */
 
+#email-text-button {
+  margin-bottom: 40px;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
