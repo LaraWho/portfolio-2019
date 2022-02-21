@@ -54,7 +54,7 @@ html {
 
 .dark-mode #overlay {
   background-color: var(--dark-background-even);
-  opacity: 0.75;
+  opacity: 0.9;
 }
 
 .dark-mode p, .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode .project-box > a, .dark-mode .skill-list > h2, .dark-mode .navbar > h4 {
@@ -87,8 +87,6 @@ html {
 
 /* dark mode toggle */
 #toggle-container {
-  width: 95vw;
-  text-align: right;
   position: relative;
 }
 
@@ -179,26 +177,26 @@ header {
 }
 
 .title {
-  text-transform: uppercase;
   z-index: 2;
   width: 90vw;
   letter-spacing: 3px;
 }
 
 .title > h1 {
+  text-transform: uppercase;
   font-size: 3.5em;
   line-height: 1em;
   font-weight: 800;
-  margin: 24px 16px;
+  margin: 24px 16px 16px;
   font-family: var(--header-font);
   color: var(--header-color);
 }
 
 .title > h2 {
   font-size: 2em;
-  line-height: 1.25em;
+  line-height: 1em;
   text-transform: capitalize;
-  margin: 4px 16px;
+  margin: 8px 16px 32px;
   color: var(--subtitle-light);
 }
 
@@ -292,6 +290,11 @@ p {
   color: var(--body-text);
   font-family: var(--text-font);
   transition: color .15s ease;
+}
+
+.title p {
+  color: var(--dark-body-text);
+  font-size: 1.25em;
 }
 
 /* About */
