@@ -57,15 +57,15 @@ html {
   opacity: 0.9;
 }
 
-.dark-mode p, .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode .project-box > a, .dark-mode .skill-list > h2, .dark-mode .navbar > h4 {
+.dark-mode p, .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode .project-box > a, .dark-mode .skill-list > h2, .dark-mode .navbar > a {
   color: var(--dark-body-text);
 }
 
-.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode .navbar > h4, .dark-mode .fa-arrow-alt-circle-up:before, .dark-mode a {
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode .navbar > a, .dark-mode .fa-arrow-alt-circle-up:before, .dark-mode a {
   color: var(--dark-subtitle-light);
 }
 
-.dark-mode .navbar > h4:hover, .dark-mode a:hover, .dark-mode .fa-arrow-alt-circle-up:hover::before {
+.dark-mode .navbar > a:hover, .dark-mode a:hover, .dark-mode .fa-arrow-alt-circle-up:hover::before {
   color: var(--dark-hover-color);
 }
 
@@ -205,7 +205,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   width: 100vw;
-  height: 10vh;
+  height: 60px;
   background-color: var(--nav-bg-color);
   font-size: 1em;
   text-transform: lowercase;
@@ -217,26 +217,34 @@ nav {
   position: sticky;
   z-index: 5;
   top: 0;
+  margin: 0;
 }
 
-.navbar h4 a {
+.navbar a {
+  text-align: center;
   cursor: pointer;
   font-family: var(--header-font);
   color: var(--nav-text);
   font-weight: 400;
-  padding: 8px;
+  padding: 20px;
+  margin: 0;
   transition: 0.35s all ease;
-  padding: 0 0 2px 0;
+  /* padding: 0 0 2px 0; */
   border-bottom: 2px solid transparent;
 }
 
-.navbar > h4:hover {
+.navbar > a:hover {
   color: var(--hover-color);
 }
 
-.navbar h4 a.active {
+.navbar a.active {
+  color: var(--dark-nav-bg-color);
+  border-bottom: 4px solid var(--dark-nav-bg-color);
+}
+
+.dark-mode .navbar a.active {
   color: var(--dark-body-text);
-  border-bottom: 2px solid var(--dark-body-text);
+  border-bottom: 4px solid var(--dark-body-text);
 }
 
 /* About, Skills */
@@ -566,9 +574,13 @@ img:hover {
   }
 
   /* Nav Bar */
-  .navbar > h4 {
+  nav {
+    height: unset;
+  }
+
+  .navbar > a {
     font-size: 1.5em;
-    padding: 20px;
+    padding: 24px;
   }
 
   /* About */
